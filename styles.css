@@ -1,0 +1,215 @@
+@font-face {
+  font-family:"Decovar Alpha";
+  src: url("DecovarAlpha-VF.subset.ttf") format("ttf"),
+       url("DecovarAlpha-VF.ttf") format("ttf");
+}
+body{
+  font-family:"Decovar Alpha";
+ background-image: url(img/marble.jpg)
+}
+
+#lettre{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ width: 100%;
+ margin: 0;
+ padding:0;
+ justify-content: center;
+
+
+}
+ .card{
+   filter: grayscale(100%);
+   color:white;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+ }
+ .card:hover{
+   filter: grayscale(0%);
+   transition: 0.5s ease;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+ }
+ #a:hover{
+   background-size: 110%;
+   transition: 1s ease;
+ }
+ h3{
+   font-size: 14em;
+   margin:0;
+ }
+
+#nav {
+position: fixed;
+bottom:0;
+
+z-index: 3;
+}
+#nav a {
+  background-color: black;
+  color: white;;
+  text-decoration: none;
+  border: solid 1px white;
+  padding: 10px;
+  margin: 0;
+}
+
+
+#a{
+  background-image: url(img/alpha_wann.jpg);
+  background-size: 100%;
+}
+#b{
+  background-image: url(img/booba.jpg);
+  background-size: 100%;
+}
+#c{
+  background-image: url(img/caballero.jpg);
+  background-size: 100%;
+}
+#d{
+  background-image: url(img/dave.jpg);
+  background-size: 100%;
+}
+#e{
+  background-image: url(img/eminem.jpg);
+  background-size: 100%;
+}
+#f{
+  background-image: url(img/freeze.jpg);
+  background-size: 100%;
+}
+#g{
+  background-image: url(img/guizmo.jpg);
+  background-size: 100%;
+}
+#h{
+  background-image: url(img/headie_one.jpg);
+  background-size: 100%;
+}
+#i{
+  background-image: url(img/ice_cube.jpg);
+  background-size: 100%;
+}
+#j{
+  background-image: url(img/josman.jpg);
+  background-size: 100%;
+}
+#k{
+  background-image: url(img/kuncks.jpg);
+  background-size: 100%;
+}
+#l{
+  background-image: url(img/lil.jpg);
+  background-size: 100%;
+}
+#m{
+  background-image: url(img/mac-miller.jpg);
+  background-size: 100%;
+}
+#n{
+  background-image: url(img/nekfeu.jpg);
+  background-size: 100%;
+}
+#o{
+  background-image: url(img/orelsan.jpg);
+  background-size: 100%;
+}
+#p{
+  background-image: url(img/paname_bende.jpg);
+  background-size: 100%;
+}
+#q{
+  background-image: url(img/quavo.jpg);
+  background-size: 100%;
+}
+#r{
+  background-image: url(img/rohff.jpg);
+  background-size: 100%;
+}
+#s{
+  background-image: url(img/skepta.jpg);
+  background-size: 100%;
+}
+#t{
+  background-image: url(img/tyler_the_creator.jpg);
+  background-size: 100%;
+}
+#u{
+  background-image: url(img/jewel_usain.jpg);
+  background-size: 100%;
+}
+#v{
+  background-image: url(img/vald.jpg);
+  background-size: 100%;
+}
+#w{
+  background-image: url(img/wiz_khalifa.jpg);
+  background-size: 100%;
+}
+#x{
+  background-image: url(img/xxxtentacion.jpg);
+  background-size: 100%;
+}
+#y{
+  background-image: url(img/young.jpg);
+  background-size: 100%;
+}
+#z{
+  background-image: url(img/zola.jpg);
+  background-size: 100%;
+}
+
+.card{
+   margin:3em;
+   border-radius: 0.5em;
+  width: 20em;
+  height:30em;
+  border: solid 1px black;
+}
+
+a:focus[data-filter]{
+    opacity:.8;
+     outline:none;
+
+}
+
+
+
+a[data-filter="all"]:focus ~ div:not([data-filter="all"]){
+  width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+
+}
+
+
+a[data-filter="fr"]:focus ~ div:not([data-filter="fr"]){
+    width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+
+}
+a[data-filter="en"]:focus ~ div:not([data-filter="en"]){
+    width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+
+}
+a[data-filter="us"]:focus ~ div:not([data-filter="us"]){
+    width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+
+}
