@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>abécédaire</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="normalize.css">
   <script src="stylesheet" href="test.js" charset="utf-8"></script>
 
 </head>
@@ -15,45 +14,47 @@
     <h1>ABECEDAIRE</h1>
     <h2>RAPPER EDITION</h2>
   </div>
+  <div>
   <video autoplay muted loop id="video">
     <source src="img/bg.mp4" type="video/mp4">
   </video>
+</div>
   </section>
 <div id="nav">
-  <a href="#" data-filter="all" tabindex="-1">TOUT</a>
-  <a href="#" data-filter="fr" tabindex="-1">Francais</a>
-  <a href="#" data-filter="en" tabindex="-1">Britannique</a>
-  <a href="#" data-filter="us" tabindex="-1">Americain</a>
+  <input type="checkbox" href="#" name="all" tabindex="-1">TOUT
+  <input type="checkbox" href="#" name="fr" tabindex="-1">Francais
+  <input type="checkbox" href="#" name="en" tabindex="-1">Britannique
+  <input type="checkbox" href="#" name="us" tabindex="-1">Americain
 </div>
 
 
 <section id="lettre">
 
-<div class="card" id="a" data-filter="fr"><h3>a</h3><div class="carré"><p>Alpha Wann</p></div></div>
-<div class="card" id="b" data-filter="fr"><h3>b</h3><div class="carré"><p>Booba</p></div></div>
-<div class="card" id="c" data-filter="fr"><h3>c</h3><div class="carré"><p>Caballero</p></div></div>
-<div class="card" id="d" data-filter="en"><h3>d</h3><div class="carré"><p>Dave</p></div></div>
-<div class="card" id="e" data-filter="us"><h3>e</h3><div class="carré"><p>Eminem</p></div></div>
-<div class="card" id="f" data-filter="fr"><h3>f</h3><div class="carré"><p>Freeze Corleone</p></div></div>
-<div class="card" id="g" data-filter="fr"><h3>g</h3><div class="carré"><p>Guizmo</p></div></div>
-<div class="card" id="h" data-filter="en"><h3>h</h3><div class="carré"><p>Headie One</p></div></div>
-<div class="card" id="i" data-filter="us"><h3>i</h3><div class="carré"><p>Ice Cube</p></div></div>
-<div class="card" id="j" data-filter="fr"><h3>j</h3><div class="carré"><p>Josman</p></div></div>
-<div class="card" id="k" data-filter="en"><h3>k</h3><div class="carré"><p>Knucks</p></div></div>
-<div class="card" id="l" data-filter="us"><h3>l</h3><div class="carré"><p>Lil</p></div></div>
-<div class="card" id="m" data-filter="us"><h3>m</h3><div class="carré"><p>Mac Miller</p></div></div>
-<div class="card" id="n" data-filter="fr"><h3>n</h3><div class="carré"><p>Nekfeu</p></div></div>
-<div class="card" id="o" data-filter="fr"><h3>o</h3><div class="carré"><p>Orelsan</p></div></div>
-<div class="card" id="p" data-filter="fr"><h3>p</h3><div class="carré"><p>Paname Bende</p></div></div>
-<div class="card" id="q" data-filter="us"><h3>q</h3><div class="carré"><p>Quavo</p></div></div>
-<div class="card" id="r" data-filter="fr"><h3>r</h3><div class="carré"><p>Rohff</p></div></div>
-<div class="card" id="s" data-filter="en"><h3>s</h3><div class="carré"><p>Skepta</p></div></div>
-<div class="card" id="t" data-filter="us"><h3>t</h3><div class="carré"><p>Tyler The Creator</p></div></div>
-<div class="card" id="u" data-filter="fr"><h3>u</h3><div class="carré"><p>Usain Jewel</p></div></div>
-<div class="card" id="v" data-filter="fr"><h3>v</h3><div class="carré"><p>Vald</p></div></div>
-<div class="card" id="w" data-filter="us"><h3>w</h3><div class="carré"><p>Wiz Khalifa</p></div></div>
-<div class="card" id="x" data-filter="fr"><h3>x</h3><div class="carré"><p>XXXTentacion</p></div></div>
-<div class="card" id="y" data-filter="us"><h3>y</h3><div class="carré"><p>Young</p></div></div>
-<div class="card" id="z" data-filter="fr"><h3>z</h3><div class="carré"><p>Zola</p></div></div>
+<div class="card" id="a" data-type="fr"><h3>a</h3><div class="carré"><p>Alpha Wann</p></div></div>
+<div class="card" id="b" data-type="fr"><h3>b</h3><div class="carré"><p>Booba</p></div></div>
+<div class="card" id="c" data-type="fr"><h3>c</h3><div class="carré"><p>Caballero</p></div></div>
+<div class="card" id="d" data-type="en"><h3>d</h3><div class="carré"><p>Dave</p></div></div>
+<div class="card" id="e" data-type="us"><h3>e</h3><div class="carré"><p>Eminem</p></div></div>
+<div class="card" id="f" data-type="fr"><h3>f</h3><div class="carré"><p>Freeze Corleone</p></div></div>
+<div class="card" id="g" data-type="fr"><h3>g</h3><div class="carré"><p>Guizmo</p></div></div>
+<div class="card" id="h" data-type="en"><h3>h</h3><div class="carré"><p>Headie One</p></div></div>
+<div class="card" id="i" data-type="us"><h3>i</h3><div class="carré"><p>Ice Cube</p></div></div>
+<div class="card" id="j" data-type="fr"><h3>j</h3><div class="carré"><p>Josman</p></div></div>
+<div class="card" id="k" data-type="en"><h3>k</h3><div class="carré"><p>Knucks</p></div></div>
+<div class="card" id="l" data-type="us"><h3>l</h3><div class="carré"><p>Lil</p></div></div>
+<div class="card" id="m" data-type="us"><h3>m</h3><div class="carré"><p>Mac Miller</p></div></div>
+<div class="card" id="n" data-type="fr"><h3>n</h3><div class="carré"><p>Nekfeu</p></div></div>
+<div class="card" id="o" data-type="fr"><h3>o</h3><div class="carré"><p>Orelsan</p></div></div>
+<div class="card" id="p" data-type="fr"><h3>p</h3><div class="carré"><p>Paname Bende</p></div></div>
+<div class="card" id="q" data-type="us"><h3>q</h3><div class="carré"><p>Quavo</p></div></div>
+<div class="card" id="r" data-type="fr"><h3>r</h3><div class="carré"><p>Rohff</p></div></div>
+<div class="card" id="s" data-type="en"><h3>s</h3><div class="carré"><p>Skepta</p></div></div>
+<div class="card" id="t" data-type="us"><h3>t</h3><div class="carré"><p>Tyler The Creator</p></div></div>
+<div class="card" id="u" data-type="fr"><h3>u</h3><div class="carré"><p>Usain Jewel</p></div></div>
+<div class="card" id="v" data-type="fr"><h3>v</h3><div class="carré"><p>Vald</p></div></div>
+<div class="card" id="w" data-type="us"><h3>w</h3><div class="carré"><p>Wiz Khalifa</p></div></div>
+<div class="card" id="x" data-type="fr"><h3>x</h3><div class="carré"><p>XXXTentacion</p></div></div>
+<div class="card" id="y" data-type="us"><h3>y</h3><div class="carré"><p>Young</p></div></div>
+<div class="card" id="z" data-type="fr"><h3>z</h3><div class="carré"><p>Zola</p></div></div>
 </section>
 </body>
