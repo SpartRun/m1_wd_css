@@ -5,31 +5,33 @@
 }
 body{
   font-family:"Decovar Alpha";
- background-image: url(img/marble.jpg)
+ background-image: url(img/marble.jpg);
+ margin: 0;
+    padding: 0;
+
 }
 #hero{
-    z-index: 100;
+
 }
 #video{
   width: 100%;
 }
 .middle_text{
   position: absolute;
-  height: 25%;
    width:100%;
    background-color: white;
-   top: 40%;
+   top: 45%;
    text-align: center;
 }
 h1{
-  font-size: 10em !important;
-  margin:0!important;
+  font-size: 9em ;
+  margin:0;
 }
 h2{
   color: black;
-  margin:0!important;
-  width: 70%;
-    text-align: right;
+  width: 69%;
+  text-align: right;
+  margin:-20px 0 10px 0;
 
 }
 #lettre{
@@ -61,7 +63,6 @@ h2{
  }
  .card:hover{
    filter: grayscale(0%) contrast(100%);
-
    transition: 0.5s ease;
    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
  }
@@ -74,9 +75,31 @@ h2{
    font-size: 12em;
    transition: 0.5s ease;
  }
+ @keyframes motionblur {
+  0% {
+    filter: blur(0px);
+    background-size:100%;
+    filter: grayscale(100%) contrast(105%);
+  }
+
+  95% {
+    filter: blur(1px);
+    background-size:111%;
+    filter: grayscale(0) contrast(105%)
+  }
+
+  100% {
+    filter: blur(0px);
+    background-size:110%;
+    ;
+  }
+}
+
  #a:hover, #b:hover, #c:hover, #d:hover, #e:hover, #f:hover,  #g:hover, #h:hover, #i:hover, #j:hover, #k:hover, #l:hover, #m:hover, #n:hover, #o:hover, #p:hover, #q:hover, #r:hover, #s:hover, #t:hover, #u:hover,  #v:hover, #w:hover, #x:hover, #y:hover, #z:hover {
-   background-size:110%;
-   transition: 0.5s ease;
+  background-size:110%;
+   animation-name: motionblur;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
  }
  h3{
    font-size: 14em;
@@ -105,15 +128,7 @@ border-bottom-right-radius: 0.5em;
 #nav {
 position: fixed;
 bottom:0;
-z-index: 3;
-}
-#nav a {
-  background-color: black;
-  color: white;;
-  text-decoration: none;
-  border: solid 1px white;
-  padding: 10px;
-  margin: 0;
+z-index: 1;
 }
 
 
@@ -222,44 +237,8 @@ z-index: 3;
   background-size: 100%;
 }
 
-
-a:focus[data-filter]{
-     outline:none;
-}
-
-
-
-a[data-filter="all"]:focus ~ div:not([data-filter="all"]){
-  width:0;
-  height:0;
-  padding:0;
-  margin:0;
-  opacity:0;
-
-}
-
-
-a[data-filter="fr"]:focus ~ div:not([data-filter="fr"]){
-    width:0;
-  height:0;
-  padding:0;
-  margin:0;
-  opacity:0;
-
-}
-a[data-filter="en"]:focus ~ div:not([data-filter="en"]){
-    width:0;
-  height:0;
-  padding:0;
-  margin:0;
-  opacity:0;
-
-}
-a[data-filter="us"]:focus ~ div:not([data-filter="us"]){
-    width:0;
-  height:0;
-  padding:0;
-  margin:0;
-  opacity:0;
-
+input[name=fr]:checked ~ #lettre div:not([data-type=fr]),
+input[name=en]:checked ~ #lettre div:not([data-type=en]),
+input[name=us]:checked ~ #lettre div:not([data-type=us]){
+  display: none;
 }
