@@ -3,47 +3,94 @@
   src: url("font/DecovarAlpha-VF.subset.ttf") format("ttf"),
        url("font/DecovarAlpha-VF.ttf") format("ttf");
 }
+:root{
+  --fakewhite: #e9eef2;
+  --fakeblack: #171618;
+  --fakeblackopacity: #17161826;
+}
 body{
   font-family:"Decovar Alpha";
  background-image: url(img/marble.jpg);
  margin: 0;
-    padding: 0;
+padding: 0;
 
 }
 #hero{
 
 }
 #video{
-  width: 100%;
+  position: absolute; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background: url(freeze.jpg) no-repeat;
+  background-size: cover;
 }
 .middle_text{
+background-image: radial-gradient(var(--fakeblackopacity) 1px, var(--fakewhite) 1px);
+background-size: 15px 15px;
+z-index:10;
   position: absolute;
-   width:100%;
-   background-color: white;
-   top: 45%;
+  left: 0;
+  text-align: center;
+  width:100%;
+   background-color: var(--fakewhite);
+   top: 37%;
    text-align: center;
+   animation-name: point;
+  animation-duration: 18s;
+  animation-timing-function: ease;
+   animation-iteration-count: infinite;
+}
+@keyframes point {
+ 0% {
+   background-size: 15px 15px;
+ }
+
+ 50% {
+   background-size: 25px 25px;
+
+ }
+
+ 100% {
+    background-size: 15px 15px;
+   ;
+ }
 }
 h1{
-  font-size: 9em ;
+  font-size: 8em ;
   margin:0;
+  text-align: center;
+  font-weight: 100;
+  color: var(--fakeblack);
 }
 h2{
-  color: black;
-  width: 69%;
+  color: var(--fakeblack);
+  width: 63%;
   text-align: right;
   margin:-20px 0 10px 0;
-
+  font-weight: 100;
 }
 #lettre{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
  width: 100%;
- margin: 0;
+ margin-top:102vh;
  padding:0;
  justify-content: center;
 
 
+}
+h3{
+  font-variation-settings: "BLDA" 800, "SKLA" 400, "TRMK" 1000;
+  text-shadow: 1px 1px 20px #00000073;
+  font-size: 14em;
+  margin:0;
+  margin-top:30%;
+  color:var(--fakewhite);
+}
+a{
+  text-decoration: none;
 }
  .card{
    margin:3em;
@@ -52,7 +99,6 @@ h2{
   height:30em;
   border: solid 1px black;
    filter: grayscale(100%) contrast(105%);
-   color:white;
    display: flex;
    justify-content: space-between;
    text-align: center;
@@ -61,6 +107,7 @@ h2{
      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 
  }
+
  .card:hover{
    filter: grayscale(0%) contrast(100%);
    transition: 0.5s ease;
@@ -82,10 +129,11 @@ h2{
     filter: grayscale(100%) contrast(105%);
   }
 
-  95% {
+  97% {
     filter: blur(1px);
     background-size:111%;
-    filter: grayscale(0) contrast(105%)
+    filter: grayscale(0) contrast(105%);
+    text-shadow: 1px 1px 20px #00000010;
   }
 
   100% {
@@ -101,11 +149,7 @@ h2{
   animation-duration: 0.5s;
   animation-timing-function: ease;
  }
- h3{
-   font-size: 14em;
-   margin:0;
-   margin-top:30%
- }
+
 p{
   font-size: 1.2em;
   color: black;
@@ -114,7 +158,7 @@ p{
 }
 
 .carré{
-  background-color: white;
+  background-color: var(--fakewhite);
   transform: translate(0, 50px);
   position: absolute;
   bottom: 0;
@@ -125,12 +169,6 @@ height: 3em;
 border-bottom-left-radius: 0.5em;
 border-bottom-right-radius: 0.5em;
 }
-#nav {
-position: fixed;
-bottom:0;
-z-index: 1;
-}
-
 
 #a{
   background-image: url(img/alpha_wann.jpg);
@@ -236,9 +274,83 @@ z-index: 1;
   background-image: url(img/zola.jpg);
   background-size: 100%;
 }
+#b1{
+  position: absolute;
+  top:10;
+  right:20%;
+}
+#b2{
+  position: absolute;
+  top:10;
+  right:9%
+}
+#b3{
+  position: absolute;
+  top:10;
+  right:0;
+}
+input[type="checkbox"].box {
+  display: none;
+
+}
+input[type="checkbox"].box + label {
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-top:100vh;
+  font-size: 1.5em;
+  padding: 0.5rem 0.8rem;
+  border: 1px  dashed var(--fakeblack);
+  background-color: var(--fakewhite);
+  z-index: 3;
+}
+input[type="checkbox"].box + label:hover {
+    box-shadow: 0 2px 3px rgba(0,0,0,0.4), 0 1px 4px rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+input[type="checkbox"].box:checked + label {
+  transition: 0.2s ease;
+ border: 1px  solid var(--fakewhite);
+ background-color: var(--fakeblack);
+ color:var(--fakewhite);
+}
 
 input[name=fr]:checked ~ #lettre div:not([data-type=fr]),
 input[name=en]:checked ~ #lettre div:not([data-type=en]),
 input[name=us]:checked ~ #lettre div:not([data-type=us]){
   display: none;
+}
+@media only screen and (max-width: 1280px) {
+  input[type="checkbox"].box + label {
+    font-size: 1.2em;
+  }
+  #b1{
+    right:32%;
+  }
+  #b2{
+    right:15%
+  }
+
+}
+@media only screen and (max-width: 620px) {
+
+   h1 {
+      font-size: 4em;
+   }
+   h2 {
+      font-size: 1em;
+      width:82%;
+      padding:1%;
+   }
+.middle_text{
+
+}
+input[type="checkbox"].box + label {
+  font-size: 1em;
+}
+#b1{
+  right:60%;
+}
+#b2{
+  right:28%
+}
+
 }

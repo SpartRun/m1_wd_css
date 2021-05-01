@@ -10,27 +10,27 @@
 </head>
 <body>
   <section id="hero">
-    <div class="middle_text">
-    <h1>ABECEDAIRE</h1>
-    <h2>RAPPER EDITION</h2>
-  </div>
   <div>
   <video autoplay muted loop id="video">
     <source src="img/bgblack.mp4" type="video/mp4">
   </video>
+  <div class="middle_text">
+  <h1>ABECEDAIRE</h1>
+  <h2>RAPPER EDITION</h2>
+</div>
 </div>
   </section>
-<div id="nav">
-  <input type="checkbox" href="#" name="all" tabindex="-1">TOUT
-  <input type="checkbox" href="#" name="fr" tabindex="-1">Francais
-  <input type="checkbox" href="#" name="en" tabindex="-1">Britannique
-  <input type="checkbox" href="#" name="us" tabindex="-1">Americain
-</div>
 
+  <input type="checkbox" href="#" name="fr" class="box" id="box-a"  tabindex="-1">
+  <label for="box-a" id="b1" >Francais</label>
+  <input type="checkbox" href="#" name="en" class="box" id="box-b"  tabindex="-1">
+  <label for="box-b" id="b2">Britannique</label>
+  <input type="checkbox" href="#" name="us" class="box" id="box-c" tabindex="-1">
+  <label for="box-c" id="b3">Americain</label>
 
 <section id="lettre">
 
-<div class="card" id="a" data-type="fr"><h3>a</h3><div class="carré"><p>Alpha Wann</p></div></div>
+<a href ="#a"><div class="card" id="a" data-type="fr"><h3>a</h3><div class="carré"><p>Alpha Wann</p></div></div></a>
 <div class="card" id="b" data-type="fr"><h3>b</h3><div class="carré"><p>Booba</p></div></div>
 <div class="card" id="c" data-type="fr"><h3>c</h3><div class="carré"><p>Caballero</p></div></div>
 <div class="card" id="d" data-type="en"><h3>d</h3><div class="carré"><p>Dave</p></div></div>
@@ -57,4 +57,5 @@
 <div class="card" id="y" data-type="us"><h3>y</h3><div class="carré"><p>Young</p></div></div>
 <div class="card" id="z" data-type="fr"><h3>z</h3><div class="carré"><p>Zola</p></div></div>
 </section>
+
 </body>
